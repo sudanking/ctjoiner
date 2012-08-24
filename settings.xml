@@ -1,0 +1,33 @@
+<xml-cluster-tracker-manager ver="1.0">
+<!--
+    Document   : settings.xml
+    Created on : Aug 21, 2012, 3:16 AM
+    Author     : Sudanking
+    Description:
+        Join multible cache trackers in one tracker settings file.
+        
+-->
+
+<tracker enabled="true"> <!-- you can turn off this tracker using enabled="false" default:true -->
+    <tracker_des>Tracker 1</tracker_des> <!-- Tracker Description is optional -->
+    <tracker_url>http://www.myhost.com/cluster/cluster</tracker_url> <!-- Non encrypted tracker url -->   
+</tracker>
+
+<tracker enabled="false">
+    <tracker_des>Tracker 2</tracker_des>
+    <tracker_url>http://myhost.dyndns.org/cluster.enc</tracker_url> <!-- encrypted tracker url -->   
+    <tracker_key>123456789</tracker_key> <!-- encrypted tracker key -->
+</tracker>
+
+<blackList> <!-- to block host/ip from your tracker all you have to do is listed here -->
+    <host enabled="false">hostname1:Port</host> <!-- default enabled="true" -->
+    <host enabled="true">ip:Port</host>
+</blackList>
+
+<my_tracker_key>123456789</my_tracker_key> <!-- your key that you will use in csp -->
+
+<debug enabled="true"/> <!-- In case you want to display clear (not encryption) cluster with all hosts.-->
+<!-- you need to turn that to "true" then check the output in your browser. default:false -->
+
+
+</xml-cluster-tracker-manager>

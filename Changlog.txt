@@ -1,0 +1,24 @@
+ctjoiner ChangeLog (cluster Tracker Joiner)
+
+Version 1.1
+21-August-2012
+
+-Added: New BlockList Element to block host/ip from final cluster/tracke list.
+-Added: New attribute per tracker "BlockList". default:true
+-Added: debug option. default:false In case you want to display clear all hosts in cluster to check it, then turn that to "true" and check the output in your browser.
+-Changed: Send error message with main encryption KEY is missing
+-Changed: remove dublicated hosts from final tracker.
+-Fixed: stop looping in case of exchange ctjoiner <-> ctjoiner. Note: not recommended use that type of exhcnage. 
+
+Version 1.0.2
+5-Jan-2012
+
+-Added: New attribute per tracker "enbaled". default:true
+-Fixed: check for each setting in settings.xml if it is valid.
+-Fixed: checking fetch  url cluster/tracker file from remote host and send error message if it can not be fetched.
+-Changed: remove dublicated hosts from final tracker.
+
+Version 1.0.0
+May 23, 2011
+
+First pre-release for testing
